@@ -53,6 +53,9 @@ function cartReducer(state, action) {
     }
     return { ...state, items: updatedItems };
   }
+
+  return state;
+
 }
 
 export function CartContextProvider({ children }) {
