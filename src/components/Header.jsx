@@ -6,6 +6,13 @@ import CartContext from "../store/CartContext";
 function Header() {
   const { items } = useContext(CartContext);
 
+
+    // items: [
+    //         { id: 1, item: burger, quantity: 1 },
+    //         { id: 2, item: pizza, quanitiy: 2 },
+    //         { id: 3, item: juice, quantity: 2 },
+    //        ];
+
   const totalCartItmes = items.reduce((totalNumberOfItems, item) => {
     return totalNumberOfItems + item.quantity;
   }, 0);
