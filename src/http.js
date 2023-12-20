@@ -9,7 +9,7 @@ export async function fetchData() {
 }
 
 export async function saveOrders(customer, items) {
-  const response = await fetch("http://localhost:3000/orderss", {
+  const response = await fetch("http://localhost:3000/orders", {
     method: "POST",
     body: JSON.stringify({
       order: {
