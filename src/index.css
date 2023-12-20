@@ -212,6 +212,7 @@ h1 {
   color: #1f1a09;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
+  transition: 300ms;
 }
 
 .button:hover,
@@ -219,6 +220,7 @@ h1 {
   background-color: #ffab04;
   border-color: #ffab04;
   color: #1f1a09;
+  transition: 200ms;
 }
 
 .text-button {
@@ -256,8 +258,14 @@ h1 {
 }
 
 .error{
-  background-color: rgb(247, 167, 167);
+  background-color: rgb(222, 178, 178);
   color: #000000;
+}
+
+.error button{
+  background-color: rgb(24, 24, 24);
+  color: white;
+  border-color: #000000;
 }
 
 @keyframes fade-slide-up {

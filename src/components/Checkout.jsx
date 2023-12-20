@@ -17,6 +17,7 @@ function Checkout() {
     city: "",
   });
 
+  const [sendingData, setSendingData] = useState(false);
   const [error, setError] = useState(false);
   const [errorUpdatingMessage, setErrorUpdatingMessage] = useState();
 
@@ -41,6 +42,7 @@ function Checkout() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
+      setSendingData(true);
       await saveOrders(formData, items);
     } catch (error) {
       setErrorUpdatingMessage({
@@ -48,10 +50,24 @@ function Checkout() {
       });
       setError(error);
     }
+    setSendingData(false);
   }
 
   function handleError() {
     setError(false);
+  }
+
+  let actions = (
+    <>
+      <Button onClick={handleHideCheckout} type="button" textOnly>
+        Close
+      </Button>
+      <Button>Submit Order</Button>
+    </>
+  );
+
+  if(sendingData){
+    actions = <p>please wait...</p>
   }
 
   return (
@@ -108,10 +124,7 @@ function Checkout() {
             />
           </div>
           <p className="modal-actions">
-            <Button onClick={handleHideCheckout} type="button" textOnly>
-              Close
-            </Button>
-            <Button>Submit Order</Button>
+            {actions}
           </p>
         </form>
       )}
