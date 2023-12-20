@@ -249,6 +249,17 @@ h1 {
   background-color: rgba(0, 0, 0, 0.55);
 }
 
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error{
+  background-color: rgb(247, 167, 167);
+  color: #000000;
+}
+
 @keyframes fade-slide-up {
   from {
     opacity: 0;

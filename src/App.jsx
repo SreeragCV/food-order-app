@@ -8,12 +8,12 @@ import UserProgressContextProvider from "./store/UserProgressContext.jsx";
 function App() {
   return (
     <UserProgressContextProvider>
-    <CartContextProvider>
-      <Header />
-      <Meals />
-      <Checkout/>
-      <Cart/>
-    </CartContextProvider>
+      <CartContextProvider>
+        <Header />
+        <Meals />
+        <Checkout />
+        <Cart />
+      </CartContextProvider>
     </UserProgressContextProvider>
   );
 }
